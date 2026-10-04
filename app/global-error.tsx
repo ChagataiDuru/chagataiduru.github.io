@@ -1,0 +1,2 @@
+'use client';
+export default function GlobalError({retry}:{retry:()=>void}){const tr=typeof location!=='undefined'&&location.pathname.startsWith('/tr');return <html lang={tr?'tr':'en'}><body style={{fontFamily:'Arial',padding:40}}><h1>{tr?'İçerik şu anda kullanılamıyor.':'Content is temporarily unavailable.'}</h1><p>{tr?'Lütfen tekrar deneyin.':'Please try again.'}</p><button onClick={retry}>{tr?'Tekrar dene':'Try again'}</button></body></html>;}

@@ -1,0 +1,607 @@
+{
+  "settings": {
+    "_id": "siteSettings",
+    "_type": "siteSettings",
+    "name": "Çağatay Duru",
+    "email": "cagatay.duru@ozu.edu.tr",
+    "github": "https://github.com/ChagataiDuru",
+    "linkedin": "https://linkedin.com/in/chagatai-duru"
+  },
+  "profiles": [
+    {
+      "_id": "profile-en",
+      "_type": "profile",
+      "language": "en",
+      "name": "Çağatay Duru",
+      "role": "Software Engineer",
+      "bio": [
+        {
+          "_type": "block",
+          "_key": "p0",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "I’m Çağatay Duru, a software engineer with experience across backend development, VR applications and embedded systems.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "My work has included BSH software systems at NTT Data Business Solutions Turkey, microservices and internal tools at Migros, mobile VR development at Simofun, and ERP software and simulation environments at Rekrom Optoelektronik.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s2",
+              "text": "I’m interested in embedded systems and work with technologies including C, C++, Rust and TypeScript. My education record lists Electrical and Electronics Engineering with a Computer Science minor at Özyeğin University.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "portraitUrl": "/portrait.jpeg",
+      "cvUrl": "/CagatayDuruCV.pdf",
+      "contacts": [
+        {
+          "label": "Email",
+          "url": "mailto:cagatay.duru@ozu.edu.tr"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/ChagataiDuru"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://linkedin.com/in/chagatai-duru"
+        }
+      ],
+      "reviewNote": "Imported record: NTT experience was listed as “September 2024 – Present” and graduation as “Expected June 2025”. Current status has not been confirmed.",
+      "experience": [
+        {
+          "_key": "exp0",
+          "organization": "NTT Data Business Solutions Turkey",
+          "role": "Software Engineer (Project Student)",
+          "period": "September 2024 – end date to review",
+          "details": [
+            "Developed and maintained BSH software systems using .NET and Angular, and ASP.NET for legacy applications.",
+            "Designed, queried and managed application data with Microsoft SQL Server.",
+            "Implemented CI/CD pipelines using GitHub Actions and contributed across the software development lifecycle."
+          ]
+        },
+        {
+          "_key": "exp1",
+          "organization": "Simofun Oyun Teknolojileri",
+          "role": "VR Unity Developer Intern",
+          "period": "May 2024 – July 2024",
+          "details": [
+            "Implemented GPU particle systems using compute shaders and mobile optimization techniques.",
+            "Integrated a full-body avatar with physics-based interactions.",
+            "Analyzed and optimized VR performance using Unity Profiler and Oculus tools."
+          ]
+        },
+        {
+          "_key": "exp2",
+          "organization": "Migros Ticaret A.Ş.",
+          "role": "Long Term Intern Backend Developer",
+          "period": "May 2023 – May 2024",
+          "details": [
+            "Developed proof-of-concept components using AngularJS, NestJS and a Python client simulator.",
+            "Developed and maintained NestJS microservices and participated in agile team workflows.",
+            "Built an internal survey visualization and reporting tool with HTML, CSS and JavaScript."
+          ]
+        },
+        {
+          "_key": "exp3",
+          "organization": "Rekrom Optoelektronik",
+          "role": "Software Engineer Intern / Junior Software Engineer",
+          "period": "August 2022 – April 2023",
+          "details": [
+            "Developed ERP modules using Python, Django and PostgreSQL.",
+            "Created simulation environments in Unreal Engine for virtual product testing.",
+            "Developed embedded LiDAR systems in C on STM32."
+          ]
+        }
+      ],
+      "education": [
+        {
+          "_key": "ozu",
+          "organization": "Özyeğin University",
+          "qualification": "B.Sc. Electrical and Electronics Engineering; Minor in Computer Science",
+          "period": "June 2025 (expected in source; unconfirmed)"
+        }
+      ],
+      "skills": [
+        {
+          "_key": "skills0",
+          "label": "Languages",
+          "items": [
+            "Python",
+            "C#",
+            "C",
+            "C++",
+            "Java",
+            "Rust",
+            "HLSL",
+            "TypeScript",
+            "JavaScript",
+            "HTML/CSS",
+            "SQL"
+          ]
+        },
+        {
+          "_key": "skills1",
+          "label": "Frameworks & technologies",
+          "items": [
+            ".NET",
+            "ASP.NET",
+            "Angular",
+            "Unity",
+            "Unreal Engine",
+            "Bevy",
+            "Django",
+            "NestJS",
+            "React",
+            "Node.js",
+            "RabbitMQ",
+            "Embedded Systems",
+            "STM32",
+            "Linux"
+          ]
+        },
+        {
+          "_key": "skills2",
+          "label": "Databases",
+          "items": [
+            "Microsoft SQL Server",
+            "PostgreSQL",
+            "MongoDB"
+          ]
+        },
+        {
+          "_key": "skills3",
+          "label": "Developer tools",
+          "items": [
+            "VS Code",
+            "Visual Studio",
+            "Git",
+            "GitHub Actions",
+            "Jira",
+            "Docker",
+            "Microsoft Azure"
+          ]
+        }
+      ],
+      "needsReview": true
+    },
+    {
+      "_id": "profile-tr",
+      "_type": "profile",
+      "language": "tr",
+      "name": "Çağatay Duru",
+      "role": "Software Engineer",
+      "bio": [
+        {
+          "_type": "block",
+          "_key": "p0",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Ben Çağatay Duru. Backend geliştirme, VR uygulamaları ve gömülü sistemler alanlarında deneyimi olan bir yazılım mühendisiyim.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Çalışmalarım arasında NTT Data Business Solutions Turkey’de BSH yazılım sistemleri, Migros’ta mikroservisler ve dahili araçlar, Simofun’da mobil VR geliştirme, Rekrom Optoelektronik’te ERP yazılımı ve simülasyon ortamları yer alıyor.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s2",
+              "text": "Gömülü sistemlerle ilgileniyorum; C, C++, Rust ve TypeScript gibi teknolojilerle çalışıyorum. Eğitim kaydımda Özyeğin Üniversitesi’nde Elektrik-Elektronik Mühendisliği ve Bilgisayar Bilimleri yan dal programı yer alıyor.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "portraitUrl": "/portrait.jpeg",
+      "cvUrl": "/CagatayDuruCV.pdf",
+      "contacts": [
+        {
+          "label": "Email",
+          "url": "mailto:cagatay.duru@ozu.edu.tr"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/ChagataiDuru"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://linkedin.com/in/chagatai-duru"
+        }
+      ],
+      "reviewNote": "İçe aktarılan kayıt: NTT deneyimi “Eylül 2024 – Günümüz”, mezuniyet ise “Haziran 2025 (beklenen)” olarak belirtilmişti. Güncel durum doğrulanmadı. Türkçe çeviri inceleme bekliyor.",
+      "experience": [
+        {
+          "_key": "exp0",
+          "organization": "NTT Data Business Solutions Turkey",
+          "role": "Yazılım Mühendisi (Proje Öğrencisi)",
+          "period": "Eylül 2024 – bitiş tarihi gözden geçirilecek",
+          "details": [
+            "BSH yazılım sistemlerini .NET ve Angular ile, eski uygulamaları ise ASP.NET ile geliştirdi ve bakımını yaptı.",
+            "Microsoft SQL Server ile uygulama verilerini tasarladı, sorguladı ve yönetti.",
+            "GitHub Actions ile CI/CD süreçleri uyguladı ve yazılım geliştirme yaşam döngüsünün farklı aşamalarına katkıda bulundu."
+          ]
+        },
+        {
+          "_key": "exp1",
+          "organization": "Simofun Oyun Teknolojileri",
+          "role": "VR Unity Geliştirici Stajyeri",
+          "period": "Mayıs 2024 – Temmuz 2024",
+          "details": [
+            "Compute shader ve mobil optimizasyon teknikleriyle GPU tabanlı parçacık sistemleri uyguladı.",
+            "Fizik tabanlı etkileşimlere sahip tam vücut avatar sistemi entegre etti.",
+            "Unity Profiler ve Oculus araçlarıyla VR performansını analiz etti ve optimize etti."
+          ]
+        },
+        {
+          "_key": "exp2",
+          "organization": "Migros Ticaret A.Ş.",
+          "role": "Uzun Dönem Backend Geliştirici Stajyeri",
+          "period": "Mayıs 2023 – Mayıs 2024",
+          "details": [
+            "AngularJS, NestJS ve Python istemci simülatörüyle kavram kanıtlama bileşenleri geliştirdi.",
+            "NestJS mikroservislerini geliştirdi, bakımını yaptı ve çevik ekip süreçlerine katıldı.",
+            "HTML, CSS ve JavaScript ile dahili anket görselleştirme ve raporlama aracı geliştirdi."
+          ]
+        },
+        {
+          "_key": "exp3",
+          "organization": "Rekrom Optoelektronik",
+          "role": "Yazılım Mühendisi Stajyeri / Junior Yazılım Mühendisi",
+          "period": "Ağustos 2022 – Nisan 2023",
+          "details": [
+            "Python, Django ve PostgreSQL ile ERP modülleri geliştirdi.",
+            "Sanal ürün testleri için Unreal Engine ile simülasyon ortamları oluşturdu.",
+            "STM32 üzerinde C ile gömülü LiDAR sistemleri geliştirdi."
+          ]
+        }
+      ],
+      "education": [
+        {
+          "_key": "ozu",
+          "organization": "Özyeğin Üniversitesi",
+          "qualification": "Elektrik-Elektronik Mühendisliği Lisans Programı; Bilgisayar Bilimleri Yan Dalı",
+          "period": "Haziran 2025 (kaynakta beklenen tarih; doğrulanmadı)"
+        }
+      ],
+      "skills": [
+        {
+          "_key": "skills0",
+          "label": "Programlama dilleri",
+          "items": [
+            "Python",
+            "C#",
+            "C",
+            "C++",
+            "Java",
+            "Rust",
+            "HLSL",
+            "TypeScript",
+            "JavaScript",
+            "HTML/CSS",
+            "SQL"
+          ]
+        },
+        {
+          "_key": "skills1",
+          "label": "Framework ve teknolojiler",
+          "items": [
+            ".NET",
+            "ASP.NET",
+            "Angular",
+            "Unity",
+            "Unreal Engine",
+            "Bevy",
+            "Django",
+            "NestJS",
+            "React",
+            "Node.js",
+            "RabbitMQ",
+            "Gömülü Sistemler",
+            "STM32",
+            "Linux"
+          ]
+        },
+        {
+          "_key": "skills2",
+          "label": "Veritabanları",
+          "items": [
+            "Microsoft SQL Server",
+            "PostgreSQL",
+            "MongoDB"
+          ]
+        },
+        {
+          "_key": "skills3",
+          "label": "Geliştirme araçları",
+          "items": [
+            "VS Code",
+            "Visual Studio",
+            "Git",
+            "GitHub Actions",
+            "Jira",
+            "Docker",
+            "Microsoft Azure"
+          ]
+        }
+      ],
+      "needsReview": true
+    }
+  ],
+  "projects": [
+    {
+      "_id": "project-space-miner-en",
+      "_type": "project",
+      "language": "en",
+      "title": "Space Miner",
+      "description": "Developed a complete 2D space mining game with physics-based movement and particle effects using Rust and the Bevy game engine.",
+      "period": "May 2024",
+      "technologies": [
+        "Rust",
+        "Bevy"
+      ],
+      "order": 0,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-space-miner-tr",
+      "_type": "project",
+      "language": "tr",
+      "title": "Space Miner",
+      "description": "Rust ve Bevy oyun motoruyla fizik tabanlı hareket ve parçacık efektleri içeren eksiksiz bir 2D uzay madenciliği oyunu geliştirdi.",
+      "period": "Mayıs 2024",
+      "technologies": [
+        "Rust",
+        "Bevy"
+      ],
+      "order": 0,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-ocpp-csms-en",
+      "_type": "project",
+      "language": "en",
+      "title": "OCPP CSMS Framework",
+      "description": "Built a Charge Station Management System supporting concurrent OCPP connections and real-time status updates over WebSockets, using a microservices architecture.",
+      "period": "January 2024",
+      "technologies": [
+        "TypeScript",
+        "NestJS",
+        "AngularJS",
+        "MongoDB",
+        "RabbitMQ",
+        "WebSockets"
+      ],
+      "order": 1,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-ocpp-csms-tr",
+      "_type": "project",
+      "language": "tr",
+      "title": "OCPP CSMS Framework",
+      "description": "Mikroservis mimarisiyle eş zamanlı OCPP bağlantılarını ve WebSocket üzerinden gerçek zamanlı durum güncellemelerini destekleyen bir şarj istasyonu yönetim sistemi geliştirdi.",
+      "period": "Ocak 2024",
+      "technologies": [
+        "TypeScript",
+        "NestJS",
+        "AngularJS",
+        "MongoDB",
+        "RabbitMQ",
+        "WebSockets"
+      ],
+      "order": 1,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-ocpp-simulator-en",
+      "_type": "project",
+      "language": "en",
+      "title": "OCPP Simulator",
+      "description": "Developed an EV charger simulator implementing OCPP standards with a Tkinter interface to test the OCPP CSMS.",
+      "period": "January 2024",
+      "technologies": [
+        "Python",
+        "Tkinter",
+        "OCPP"
+      ],
+      "order": 2,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-ocpp-simulator-tr",
+      "_type": "project",
+      "language": "tr",
+      "title": "OCPP Simulator",
+      "description": "OCPP CSMS’yi test etmek için OCPP standartlarını uygulayan, Tkinter arayüzüne sahip bir elektrikli araç şarj cihazı simülatörü geliştirdi.",
+      "period": "Ocak 2024",
+      "technologies": [
+        "Python",
+        "Tkinter",
+        "OCPP"
+      ],
+      "order": 2,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-openfab-en",
+      "_type": "project",
+      "language": "en",
+      "title": "Openfab Registration System",
+      "description": "Developed a full-stack registration application to streamline equipment and resource booking for students and staff in the university’s OpenFab area.",
+      "period": "October 2023",
+      "technologies": [
+        "Python",
+        "Django",
+        "JavaScript",
+        "React"
+      ],
+      "order": 3,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-openfab-tr",
+      "_type": "project",
+      "language": "tr",
+      "title": "Openfab Registration System",
+      "description": "Üniversitenin OpenFab alanında öğrenci ve personelin ekipman ve kaynak rezervasyonlarını kolaylaştıran tam kapsamlı bir kayıt uygulaması geliştirdi.",
+      "period": "Ekim 2023",
+      "technologies": [
+        "Python",
+        "Django",
+        "JavaScript",
+        "React"
+      ],
+      "order": 3,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-lidar-en",
+      "_type": "project",
+      "language": "en",
+      "title": "Embedded LiDAR Systems",
+      "description": "Developed embedded systems in C using STM32 for LiDAR at Rekrom Optoelektronik.",
+      "period": null,
+      "technologies": [
+        "C",
+        "STM32",
+        "LiDAR"
+      ],
+      "order": 4,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-lidar-tr",
+      "_type": "project",
+      "language": "tr",
+      "title": "Embedded LiDAR Systems",
+      "description": "Rekrom Optoelektronik’te LiDAR için STM32 üzerinde C ile gömülü sistemler geliştirdi.",
+      "period": null,
+      "technologies": [
+        "C",
+        "STM32",
+        "LiDAR"
+      ],
+      "order": 4,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-custom-isa-en",
+      "_type": "project",
+      "language": "en",
+      "title": "Custom ISA Game Project",
+      "description": "Built a game on a custom Instruction Set Architecture for a graduation project.",
+      "period": null,
+      "technologies": [
+        "Custom ISA"
+      ],
+      "order": 5,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-custom-isa-tr",
+      "_type": "project",
+      "language": "tr",
+      "title": "Custom ISA Game Project",
+      "description": "Bitirme projesi kapsamında özel bir komut kümesi mimarisi üzerinde bir oyun geliştirdi.",
+      "period": null,
+      "technologies": [
+        "Custom ISA"
+      ],
+      "order": 5,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-mobile-vr-en",
+      "_type": "project",
+      "language": "en",
+      "title": "Mobile VR Optimization",
+      "description": "Optimized performance for mobile VR applications during the Unity development internship at Simofun.",
+      "period": "May 2024 – July 2024",
+      "technologies": [
+        "Unity",
+        "VR"
+      ],
+      "order": 6,
+      "needsReview": true,
+      "links": []
+    },
+    {
+      "_id": "project-mobile-vr-tr",
+      "_type": "project",
+      "language": "tr",
+      "title": "Mobile VR Optimization",
+      "description": "Simofun’daki Unity geliştirme stajında mobil VR uygulamalarının performansını optimize etti.",
+      "period": "Mayıs 2024 – Temmuz 2024",
+      "technologies": [
+        "Unity",
+        "VR"
+      ],
+      "order": 6,
+      "needsReview": true,
+      "links": []
+    }
+  ],
+  "posts": []
+}

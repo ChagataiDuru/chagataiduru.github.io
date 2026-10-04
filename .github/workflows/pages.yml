@@ -1,0 +1,41 @@
+name: Publish GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build:pages
+        env:
+          NEXT_PUBLIC_SITE_URL: https://chagataiduru.github.io
+          CONTENT_MODE: ${{ vars.CONTENT_MODE || 'auto' }}
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ vars.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ vars.NEXT_PUBLIC_SANITY_DATASET }}
+          NEXT_PUBLIC_SANITY_API_VERSION: '2026-02-01'
+          NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN: ${{ vars.NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN || 'http://127.0.0.1:3000' }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: pages-site/out
+      - uses: actions/deploy-pages@v4
+        id: deploy

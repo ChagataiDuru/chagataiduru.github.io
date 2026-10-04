@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env*
+!.env.example
+*.tsbuildinfo
+.sanity/
+.DS_Store
+
+public/__layout-check.html
+pages-site/.next/
+pages-site/out/
+pages-site/public/
