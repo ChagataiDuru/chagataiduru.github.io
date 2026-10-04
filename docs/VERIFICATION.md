@@ -47,4 +47,7 @@ No custom domain configuration was performed. GitHub.io hosting was subsequently
 - Exported PDF bytes match the original. No API/draft routes are exported. Environment files and build outputs are ignored by Git.
 - A mock public transport verifies published-only reads, draft-free SSE, sync-tag matching, publish/update/unpublish refresh, connection recovery and error reporting. This verifies code behavior, not an actual Sanity project.
 - The static export's sitemap and HTML snapshots update at build time. Live content and article metadata update in the browser. Non-JavaScript social crawlers and query-route HTTP status codes have the limitations recorded in docs/GITHUB_PAGES.md.
-- GitHub deployment status will be recorded after the hosted build is verified.
+- GitHub Actions run 37210284643 succeeded in 1m39s on a clean Ubuntu/Node 24 runner: npm ci, typecheck, 12 tests, static build and Pages deployment all passed. Deployed application commit: 48f3013.
+- Live URL: https://chagataiduru.github.io/; HTTPS is enforced. Both languages and all six main pages returned 200 with correct HTML language, canonical and JSON-LD. robots.txt, sitemap.xml and the editor setup page returned 200. The CV bytes match the imported PDF. Unknown paths and the unavailable public draft endpoint returned 404.
+- The hosted Turkish About page was visually inspected at desktop and 390px mobile widths; no horizontal overflow. Proof screenshots: docs/screenshots/github-pages-desktop.png and github-pages-mobile.png.
+- Hosted content is explicitly fixture mode. Real Sanity login, uploads, preview and publish/update/unpublish remain pending project configuration. Search Console registration was not performed.
