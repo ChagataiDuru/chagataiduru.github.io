@@ -34,3 +34,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Connected Sanity project
+Project shoydm6q, public dataset production. The existing embedded Studio remains authoritative. Keep all tokens in Git-ignored local/server configuration. Current import is draft-only and idempotent; sourceId fields track imported ordinary documents whose IDs use Sanity helpers. Generated schema/query types are maintained with npm run typegen. Initial public activation awaits content review; GitHub CONTENT_MODE=fixture intentionally preserves existing content. Editor configuration is independent of that public mode. CORS approval is pending for exactly the GitHub.io origin and 127.0.0.1:3000 with credentials; do not change it until the user approves. Use isolated catoVerification technical probes for live checks, never mutate real imported projects as a test. Their type is excluded from site queries and records must be cleaned up after verification.

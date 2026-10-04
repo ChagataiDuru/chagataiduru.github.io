@@ -41,3 +41,7 @@ Primary references:
 - https://developers.google.com/search/docs/appearance/structured-data/generate-structured-data-with-javascript
 - https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 - https://www.sanity.io/docs/content-lake/live-content-api
+
+## Current connection stage
+
+Project `shoydm6q` / dataset `production` is configured for the editor. Seventeen imported content documents remain drafts with review flags; the public site intentionally retains its existing fixture content during review. The editor's connection is independent of `CONTENT_MODE`. Public GitHub variables currently use `CONTENT_MODE=fixture`. After content review/publication, switch it to `auto` and build once to activate live public CMS content. This first activation is configuration, not a rebuild-per-publish workflow. Credentialed CORS on the exact public and local editor origins awaits explicit approval; it was not changed automatically.

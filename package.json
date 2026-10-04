@@ -9,7 +9,10 @@
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.tsx",
     "import:content": "node --import tsx scripts/import-content.ts",
-    "build:pages": "node scripts/build-pages.mjs"
+    "build:pages": "node scripts/build-pages.mjs",
+    "typegen": "sanity schemas extract && sanity typegen generate",
+    "check:sanity": "node --import tsx scripts/check-sanity.ts",
+    "check:sanity-live": "node --import tsx scripts/check-sanity-live.ts"
   },
   "dependencies": {
     "next": "16.3.8",
@@ -24,7 +27,9 @@
     "styled-components": "^6.1.19",
     "shiki": "^4.0.0",
     "server-only": "^0.0.1",
-    "history": "^5.3.0"
+    "history": "^5.3.0",
+    "@sanity/id-utils": "^1.1.0",
+    "@sanity/preview-url-secret": "^4.1.5"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

@@ -1,12 +1,13 @@
+import {defineQuery} from 'next-sanity';
 import {createClient,type SanityClient} from '@sanity/client';
 import type {Locale,Profile,Post,Project,Translation} from '@/lib/types';
-export const PUBLIC_QUERY=`{
+export const PUBLIC_QUERY=defineQuery(`{
  "settings":*[_type=="siteSettings" && _id=="siteSettings"][0]{name},
  "profile":*[_type=="profile" && language==$locale][0]{...,"cvUrl":cv.asset->url},
  "projects":*[_type=="project" && language==$locale] | order(order asc,title asc),
  "posts":*[_type=="post" && language==$locale && defined(slug.current) && defined(publishedAt)] | order(publishedAt desc){...,"slug":slug.current},
  "translations":*[_type=="translation.metadata"]{"members":translations[].value->{_id,language,"slug":slug.current}}
-}`;
+}`);
 export type PublicSnapshot={settings:{name:string}|null;profile:Profile|null;projects:Project[];posts:Post[];translations:{members:({_id:string}&Translation|null)[]}[]};
 export function publicClient(){
  const projectId=process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,dataset=process.env.NEXT_PUBLIC_SANITY_DATASET;

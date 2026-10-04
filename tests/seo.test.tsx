@@ -31,7 +31,7 @@ test('public reads explicitly select published content and omit privileged token
 });
 test('public fixture HTML has crawlable CV, project links and person schema',()=>{
  const html=renderToStaticMarkup(<PublicPage locale="en" section="about" initial={data} mode="fixture" origin="https://example.com"/>);
- assert.ok(html.includes('href="/CagatayDuruCV.pdf"'));assert.ok(html.includes('application/ld+json'));assert.ok(html.includes('ProfilePage'));assert.ok(html.includes('Sanity is not connected'));assert.ok(!html.includes('private-token'));
+ assert.ok(html.includes('href="/CagatayDuruCV.pdf"'));assert.ok(html.includes('application/ld+json'));assert.ok(html.includes('ProfilePage'));assert.ok(html.includes('CMS content is not enabled'));assert.ok(!html.includes('private-token'));
 });
 
 test('live public transport handles publish, update, unpublish and failure without a build',async()=>{

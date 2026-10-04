@@ -70,3 +70,9 @@ NEXT_PUBLIC_SITE_URL=https://chagataiduru.github.io npm run build:pages
 ```
 
 The export is `pages-site/out`. The included workflow deploys it to GitHub Pages. Query article URLs are `/{language}/blog/?slug=...`; publishing content does not trigger a frontend redeploy. See `docs/GITHUB_PAGES.md` before configuring Sanity and `docs/VERIFICATION.md` for the actual validation status.
+
+## Connected project / review stage
+
+The configured Sanity project is `shoydm6q`, public dataset `production`. The original portrait/PDF and 17 content documents were imported as drafts, with eight translation groups. Repeat imports preserve existing documents. The embedded editor at `/admin/` can be configured while public Pages remains in explicit fixture mode for review. Credentialed CORS must be approved on the exact editor origins before browser login works; then sign in with your Sanity account. Do not put the supplied token in GitHub variables or the browser. Rotate the token shared in chat and keep a least-privilege Viewer token only in `.env.local` for ongoing preview.
+
+`npm run typegen` regenerates schema/query types. `npm run check:sanity` verifies the initial draft-only import, asset integrity and local preview security. `npm run check:sanity-live -- --disposable-probe` creates isolated technical test records, checks real live events, and cleans them up without changing imported content. It creates no blog posts. See the latest section of `docs/VERIFICATION.md` for actual checks and pending browser validation.
