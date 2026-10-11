@@ -10,7 +10,7 @@ Project: `shoydm6q`, public dataset `production`. Editor: https://chagataiduru.g
 
 ## Review the imported content
 
-The import contains settings, two profiles and fourteen projects, all as drafts. There are no blog posts. The seven projects per language and their translations are linked already; placeholder URLs were omitted.
+The import contains settings, two profiles and fourteen projects. All 17 records were published with the owner's approval on 11 October 2026; there are no blog posts. The seven projects per language and their translations are linked already; placeholder URLs were omitted. The original PDF and graduation uncertainty remain as approved.
 
 - Employment is confirmed as of 11 October 2026: HAVELSAN since September 2026; NTT DATA Junior Software Developer July 2025–September 2026 and Project Student September 2024–June 2025. Confirm Özyeğin graduation/degree/minor wording in both profiles; retain that uncertainty note until confirmed.
 - Review the Turkish biography, role names, skills and project descriptions.
@@ -19,7 +19,7 @@ The import contains settings, two profiles and fourteen projects, all as drafts.
 
 ## Activate the public CMS content
 
-After reviewing the records, publish site settings, both profiles and the projects independently in each language. Then change the repository Actions variable `CONTENT_MODE` from `fixture` to `auto` and run the Pages workflow once. This initial build activates the CMS connection; subsequent publishing, updates and unpublishing refresh the public website without another build.
+Completed on 11 October 2026: the approved 17 records are published, the repository Actions variable is `CONTENT_MODE=auto`, and the initial Pages build activated live CMS content. Continue publishing each language independently. Subsequent publishing, updates and unpublishing refresh the public website without another build.
 
 Check the two About pages, two portfolios, uploaded CV and intentionally empty blog indexes. A CMS error must show the error/retry state, never old fixtures or a misleading empty result. Do not run publish/unpublish tests on real career/project records; the isolated `catoVerification` transport check is available instead.
 

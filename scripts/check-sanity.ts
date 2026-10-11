@@ -19,16 +19,23 @@ async function main(){
  console.log('PASS imported EN/TR content, dated review notes, seven projects per language; no posts invented');
  const profile=profiles.find((p:{language:string})=>p.language==='en');const cv=await auth.fetch('*[_id==$id][0].cv.asset->url',{id:profile._id});assert.ok(Buffer.from(await(await fetch(cv)).arrayBuffer()).equals(await readFile('public/CagatayDuruCV.pdf')));console.log('PASS uploaded CV bytes match source');
  for(const doc of [...profiles,...projects].filter((d:{_id:string})=>d._id.startsWith('drafts.'))){assert.equal(await pub.fetch('*[_id==$id][0]',{id:doc._id},{perspective:'raw'}),null);}
- console.log('PASS unauthenticated raw queries cannot retrieve imported drafts');
- try{await pub.patch(createDraftId('profile-en')).set({role:'Software Engineer'}).commit({dryRun:true});throw Error('Anonymous mutation unexpectedly permitted');}catch(e){assert.ok([401,403].includes((e as {statusCode?:number}).statusCode||0));}
+ const privateProbe=createDraftId(createPublishedId());
+ try{
+  await auth.create({_id:privateProbe,_type:'catoVerification',title:'Private draft access verification'});
+  assert.ok(await auth.fetch('*[_id==$id][0]',{id:privateProbe}));
+  for(const perspective of ['raw','drafts']as const)assert.equal(await pub.fetch('*[_id==$id][0]',{id:privateProbe},{perspective}),null);
+ }finally{await auth.delete(privateProbe);}
+ console.log('PASS unauthenticated raw and draft perspectives cannot retrieve private drafts; isolated probe removed');
+ try{await pub.patch(profile._id).set({role:'Software Engineer'}).commit({dryRun:true});throw Error('Anonymous mutation unexpectedly permitted');}catch(e){assert.ok([401,403].includes((e as {statusCode?:number}).statusCode||0));}
  console.log('PASS unauthenticated edit rejected (dry-run, no mutation persisted)');
  const forged=await fetch(`${origin}/api/draft-mode/enable?sanity-preview-secret=invalid`,{redirect:'manual'});assert.equal(forged.status,401);assert.ok(!forged.headers.get('set-cookie'));console.log('PASS forged preview secret rejected');
  const secretId=createPublishedId();try{
   const {secret}=await createPreviewSecret(auth,'CatoSite verification',`${origin}/admin`,undefined,secretId);const url=new URL('/api/draft-mode/enable',origin);url.searchParams.set(urlSearchParamPreviewSecret,secret);url.searchParams.set(urlSearchParamPreviewPathname,'/en/about');url.searchParams.set(urlSearchParamPreviewPerspective,'drafts');
   const response=await fetch(url,{redirect:'manual'});assert.ok([302,307].includes(response.status));const cookies=response.headers.getSetCookie();const bypass=cookies.find(c=>c.startsWith('__prerender_bypass='));assert.ok(bypass?.includes('HttpOnly'));const cookie=cookies.map(c=>c.split(';')[0]).join('; ');
   const preview=await(await fetch(`${origin}/en/about`,{headers:{cookie}})).text();assert.ok(preview.includes('Draft preview'));assert.ok(preview.includes('Download CV'));
-  const publicHtml=await(await fetch(`${origin}/en/about`)).text();assert.ok(!publicHtml.includes('Draft preview'));assert.ok(!publicHtml.includes('Download CV'));
-  const spoofed=await(await fetch(`${origin}/en/about`,{headers:{cookie:'__prerender_bypass=forged; sanity-preview-perspective=drafts'}})).text();assert.ok(!spoofed.includes('Download CV'));console.log('PASS authenticated preview handshake reads draft; separate public and forged-cookie requests do not');
+  const publishedProfile=await pub.fetch('*[_type=="profile" && language=="en"][0]{_id}');
+  const publicHtml=await(await fetch(`${origin}/en/about`)).text();assert.ok(!publicHtml.includes('Draft preview'));assert.equal(publicHtml.includes('Download CV'),!!publishedProfile);
+  const spoofed=await(await fetch(`${origin}/en/about`,{headers:{cookie:'__prerender_bypass=forged; sanity-preview-perspective=drafts'}})).text();assert.ok(!spoofed.includes('Draft preview'));assert.equal(spoofed.includes('Download CV'),!!publishedProfile);console.log('PASS valid preview handshake; public and forged-cookie requests remain published-only');
   const exit=await fetch(`${origin}/api/draft-mode/disable`,{headers:{cookie},redirect:'manual'});assert.ok(exit.headers.getSetCookie().some(c=>c.startsWith('__prerender_bypass=')&&(/Max-Age=0|Expires=Thu, 01 Jan 1970/i).test(c)));console.log('PASS exiting preview clears cookie');
  }finally{await auth.delete(createDraftId(secretId));}
 }
