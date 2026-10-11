@@ -24,7 +24,7 @@ The first connection or a change to these build-time settings requires a build. 
 
 Public pages query `perspective: published`, without a token or credentials, and subscribe to Live Content API with `includeDrafts: false`. Matching sync tags trigger a refetch. Reconnection, tab visibility and a 30-second fallback poll also refresh content. Errors hide the content behind a localized error/retry screen. They never switch to fixtures or an empty blog. An unpublished article disappears from the live list and shows the unavailable state at its query URL. Related translation references are dereferenced from published documents only.
 
-Without credentials the deployed site explicitly shows fixture content mode. `/admin/` shows setup instructions. Real login, uploads, preview and publishing remain unverified until the real project is configured.
+Without project configuration the deployed site explicitly shows fixture content mode and `/admin/` shows setup instructions. With project configuration, the editor connects independently of public content mode. The current project is configured and its login screen works; asset uploads, local authenticated preview and isolated live transport checks passed. Browser account login and editing still require verification.
 
 ## SEO and static-host limitations
 
@@ -44,4 +44,4 @@ Primary references:
 
 ## Current connection stage
 
-Project `shoydm6q` / dataset `production` is configured for the editor. Seventeen imported content documents remain drafts with review flags; the public site intentionally retains its existing fixture content during review. The editor's connection is independent of `CONTENT_MODE`. Public GitHub variables currently use `CONTENT_MODE=fixture`. After content review/publication, switch it to `auto` and build once to activate live public CMS content. This first activation is configuration, not a rebuild-per-publish workflow. Credentialed CORS on the exact public and local editor origins awaits explicit approval; it was not changed automatically.
+Project `shoydm6q` / dataset `production` is configured for the editor. Seventeen imported content documents remain drafts with review flags; the public site intentionally retains its existing fixture content during review. The editor's connection is independent of `CONTENT_MODE`. Public GitHub variables currently use `CONTENT_MODE=fixture`. After content review/publication, switch it to `auto` and build once to activate live public CMS content. This first activation is configuration, not a rebuild-per-publish workflow. The user approved credentialed CORS for exactly `https://chagataiduru.github.io` and `http://127.0.0.1:3000`; both were applied and verified on 11 October 2026. The hosted Studio now displays the Sanity account login screen. See [EDITOR_CHECKLIST.md](EDITOR_CHECKLIST.md) for the remaining account, review and activation steps.

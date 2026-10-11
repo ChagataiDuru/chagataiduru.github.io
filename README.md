@@ -48,7 +48,7 @@ This uploads the portrait/PDF, creates settings, two profiles and seven projects
 - Publication date orders articles; it is not a scheduled publishing control. Sanity’s actual Publish action controls visibility.
 - Use **Exit preview** to clear the draft cookie. Verify public behavior in a separate signed-out browser session.
 
-**The live CMS workflow has not been verified without project configuration.** Creating a real project and supplying configuration are prerequisites for validating login, uploads, authenticated preview, publication and live updates. Follow `docs/VERIFICATION.md`; do not consider publishing operational until those checks pass.
+**Validation status:** the real project is connected; asset uploads, draft privacy, the local preview handshake and isolated live publish/update/unpublish checks passed. Browser account login, Studio uploads and Presentation interaction remain pending. Public Pages still uses fixtures until the imported content has been reviewed and published. Follow `docs/VERIFICATION.md` and the [editor checklist](docs/EDITOR_CHECKLIST.md).
 
 ## Verification commands
 
@@ -73,6 +73,6 @@ The export is `pages-site/out`. The included workflow deploys it to GitHub Pages
 
 ## Connected project / review stage
 
-The configured Sanity project is `shoydm6q`, public dataset `production`. The original portrait/PDF and 17 content documents were imported as drafts, with eight translation groups. Repeat imports preserve existing documents. The embedded editor at `/admin/` can be configured while public Pages remains in explicit fixture mode for review. Credentialed CORS must be approved on the exact editor origins before browser login works; then sign in with your Sanity account. Do not put the supplied token in GitHub variables or the browser. Rotate the token shared in chat and keep a least-privilege Viewer token only in `.env.local` for ongoing preview.
+The configured Sanity project is `shoydm6q`, public dataset `production`. The original portrait/PDF and 17 content documents were imported as drafts, with eight translation groups. Repeat imports preserve existing documents. The embedded editor at `/admin/` connects while public Pages remains in explicit fixture mode for review. Approved credentialed CORS is configured for `https://chagataiduru.github.io` and `http://127.0.0.1:3000`; the hosted Studio now displays account login. Sign in with your Sanity account to complete browser workflow checks. Do not put the supplied token in GitHub variables or the browser. Rotate the token shared in chat and keep a least-privilege Viewer token only in `.env.local` for ongoing preview.
 
 `npm run typegen` regenerates schema/query types. `npm run check:sanity` verifies the initial draft-only import, asset integrity and local preview security. `npm run check:sanity-live -- --disposable-probe` creates isolated technical test records, checks real live events, and cleans them up without changing imported content. It creates no blog posts. See the latest section of `docs/VERIFICATION.md` for actual checks and pending browser validation.

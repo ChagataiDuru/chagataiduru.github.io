@@ -1,5 +1,7 @@
 # Local verification — 4 October 2026
 
+This document records historical checks below. The latest connection status is in the 11 October follow-up section; earlier unconfigured/pending statements describe their original test dates.
+
 ## Completed
 
 - `npm test`: all six meaningful tests passed: fixture/configuration policy, missing article translations, seven-project/no-post content integrity, URL safety, escaped highlighted code including Turkish characters/unknown syntax, and rich text headings/lists/links.
@@ -67,3 +69,13 @@ No custom domain configuration was performed. GitHub.io hosting was subsequently
 - GitHub Actions run 37234917160 succeeded for commit c933db5 with the configured public project variables and fixture content staging. The hosted `/admin/#/admin` loads the real Studio and displays the expected registration/CORS connection screen. Browser log reports CorsOriginError; no credentialed origins were added. Screenshot: docs/screenshots/sanity-cors-pending.png.
 - The temporary SANITY_API_WRITE_TOKEN field was cleared after import and isolated live verification. The supplied token remains server-side as the local read/preview token pending replacement with a fresh Viewer token.
 - Client assets, the Pages export and every Git repository candidate file were scanned for the supplied token: none found. The environment file remains Git-ignored and mode 0600.
+
+## Approved CORS and follow-up — 11 October 2026
+
+- Retrieved the previous confirmation question from the actual chat history and matched its first option (the two exact credentialed CORS origins) to the user's approval. The first automatic review rejected the abbreviated approval without that context; retry with the retrieved context succeeded.
+- Added only `https://chagataiduru.github.io` and `http://127.0.0.1:3000`, both with `allowCredentials: true`, and verified them through the project API. The pre-existing `http://localhost:3333` entry was left unchanged. No wildcard or additional origin was added.
+- Reloaded the hosted `/admin/#/admin`: the connection error is replaced by Sanity's Google/GitHub/email account login screen. Screenshot: `docs/screenshots/sanity-login-ready.png`. No account password or API token was entered in the browser. An API token does not constitute a signed-in browser account.
+- Restarted local Next.js at `http://127.0.0.1:3000`. `npm run typecheck`, all 12 tests and `npm run check:sanity` passed again: content integrity, original uploaded PDF bytes, draft privacy, anonymous mutation denial, forged-secret rejection, genuine local preview handshake, forged-cookie isolation and preview exit. Temporary preview secrets were removed.
+- A read-only content audit still finds 17 imported drafts, zero published website documents, zero posts and zero technical probes. Public Pages remains in fixture mode. Content review and first public CMS activation have not been claimed complete.
+- Added `docs/EDITOR_CHECKLIST.md` with account/Presentation checks, factual content review, initial activation and real article instructions. No runtime code changed in this follow-up; production and Pages build results from the connection phase remain applicable.
+- Remaining: owner account sign-in, Studio uploads and Presentation interaction, dated employment/graduation and Turkish copy review, reviewed content publication and initial `CONTENT_MODE=auto` activation. Search Console ownership and sitemap submission also need the owner's Google account.
