@@ -15,7 +15,7 @@ The import contains settings, two profiles and fourteen projects, all as drafts.
 - Employment is confirmed as of 11 October 2026: HAVELSAN since September 2026; NTT DATA Junior Software Developer July 2025–September 2026 and Project Student September 2024–June 2025. Confirm Özyeğin graduation/degree/minor wording in both profiles; retain that uncertainty note until confirmed.
 - Review the Turkish biography, role names, skills and project descriptions.
 - Review the original English PDF before replacing it: it still contains the old source wording. Both languages currently download that same original file.
-- Keep `needsReview` enabled until each document is reviewed. Upload a revised CV through the profile's file field when available; no translated PDF has been invented.
+- Keep `needsReview` enabled until each document is reviewed. English/Turkish CV review PDFs are available locally under `output/pdf/`; review them before uploading a replacement through the profile's file field. Both public languages still use the original PDF.
 
 ## Activate the public CMS content
 

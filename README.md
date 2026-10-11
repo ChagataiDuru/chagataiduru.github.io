@@ -48,7 +48,7 @@ This uploads the portrait/PDF, creates settings, two profiles and seven projects
 - Publication date orders articles; it is not a scheduled publishing control. Sanity’s actual Publish action controls visibility.
 - Use **Exit preview** to clear the draft cookie. Verify public behavior in a separate signed-out browser session.
 
-**Validation status:** the real project is connected; asset uploads, draft privacy, the local preview handshake and isolated live publish/update/unpublish checks passed. Browser account login, Studio uploads and Presentation interaction remain pending. Public Pages still uses fixtures until the imported content has been reviewed and published. Follow `docs/VERIFICATION.md` and the [editor checklist](docs/EDITOR_CHECKLIST.md).
+**Validation status:** the owner signed in with GitHub. Studio forms and authenticated EN/TR Presentation work locally; imported assets, draft privacy and isolated live publish/update/unpublish checks passed. Browser file uploads and first reviewed content publication remain pending. Public Pages still uses fixtures until activation. Follow `docs/VERIFICATION.md` and the [editor checklist](docs/EDITOR_CHECKLIST.md).
 
 ## Verification commands
 
@@ -73,6 +73,6 @@ The export is `pages-site/out`. The included workflow deploys it to GitHub Pages
 
 ## Connected project / review stage
 
-The configured Sanity project is `shoydm6q`, public dataset `production`. The original portrait/PDF and 17 content documents were imported as drafts, with eight translation groups. Repeat imports preserve existing documents. The embedded editor at `/admin/` connects while public Pages remains in explicit fixture mode for review. Approved credentialed CORS is configured for `https://chagataiduru.github.io` and `http://127.0.0.1:3000`; the hosted Studio now displays account login. Sign in with your Sanity account to complete browser workflow checks. Do not put the supplied token in GitHub variables or the browser. Rotate the token shared in chat and keep a least-privilege Viewer token only in `.env.local` for ongoing preview.
+The configured Sanity project is `shoydm6q`, public dataset `production`. The original portrait/PDF and 17 content documents were imported as drafts, with eight translation groups. Repeat imports preserve existing documents. The embedded editor at `/admin/` connects while public Pages remains in explicit fixture mode for review. Approved credentialed CORS is configured for `https://chagataiduru.github.io` and `http://127.0.0.1:3000`; the owner has signed in with GitHub. Start the local server for authenticated draft preview. Do not put the supplied token in GitHub variables or the browser. Rotate the token shared in chat and keep a least-privilege Viewer token only in `.env.local` for ongoing preview.
 
 `npm run typegen` regenerates schema/query types. `npm run check:sanity` verifies the initial draft-only import, asset integrity and local preview security. `npm run check:sanity-live -- --disposable-probe` creates isolated technical test records, checks real live events, and cleans them up without changing imported content. It creates no blog posts. See the latest section of `docs/VERIFICATION.md` for actual checks and pending browser validation.
