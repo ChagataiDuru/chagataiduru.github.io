@@ -10,3 +10,5 @@ public/__layout-check.html
 pages-site/.next/
 pages-site/out/
 pages-site/public/
+output/pdf/
+tmp/pdfs/
