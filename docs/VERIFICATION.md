@@ -94,3 +94,10 @@ No custom domain configuration was performed. GitHub.io hosting was subsequently
 - Read-only CMS preflight confirms 17 imported drafts (two profiles, fourteen projects and settings), zero published site documents and no posts. The hosted Studio still requires the owner's account sign-in. Prepared a private local publication review; it was not uploaded to GitHub or published.
 - Created separate English/Turkish CV review PDFs under Git-ignored `output/pdf/`, using the approved employment update and existing imported skills/projects. Each has two pages. Rendered and visually inspected all four final pages, checked text extraction for Turkish characters, employment dates and all seven project titles. The graduation status remains explicitly unconfirmed.
 - The downloadable original CV, original source repository, Sanity CV asset references and public CMS mode are unchanged. Review PDFs are local artifacts pending the owner's factual/content review; they were not uploaded or substituted on the live site.
+
+## Authenticated Studio and Presentation — 11 October 2026
+
+- The owner signed in with GitHub. The hosted Studio now opens the settings and profile forms with the actual Sanity account; the profile portrait and original uploaded CV are present.
+- Authenticated local Presentation opens the English About draft with the draft banner, current HAVELSAN biography, portrait and CV link. Editing overlays connect successfully. Proof: `docs/screenshots/sanity-presentation-local.png`.
+- Found and corrected the hosted Presentation target: the deprecated `origin` setting with a relative `initial` sent the preview handshake to GitHub Pages, which has no preview API. The static Studio now uses an absolute local `initial` URL; local Studio remains same-origin. Hosted preview still needs the local Next.js server running.
+- Typecheck, all 12 tests and the Pages production build passed for this configuration change. Hosted verification follows deployment. Browser file uploads and first reviewed CMS publication remain outstanding; no imported content was published during preview verification.

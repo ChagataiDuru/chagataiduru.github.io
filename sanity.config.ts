@@ -13,7 +13,7 @@ export default defineConfig({
  S.listItem().title('Türkçe profil / CV').child(S.document().schemaType('profile').documentId('profile-tr')),
  ...S.documentTypeListItems().filter(item=>!['siteSettings','profile','translation.metadata'].includes(item.getId()||''))
  ])}),documentInternationalization({supportedLanguages:[{id:'en',title:'English'},{id:'tr',title:'Türkçe'}],schemaTypes:['profile','post','project'],weakReferences:true,bulkPublish:false,apiVersion}),presentationTool({
- previewUrl:process.env.NEXT_PUBLIC_STATIC_PAGES==='true'?{origin:process.env.NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN||'http://127.0.0.1:3000',initial:'/en',previewMode:{enable:'/api/draft-mode/enable',disable:'/api/draft-mode/disable'}}:{initial:'/en',previewMode:{enable:'/api/draft-mode/enable',disable:'/api/draft-mode/disable'}},
+ previewUrl:{initial:process.env.NEXT_PUBLIC_STATIC_PAGES==='true'?`${(process.env.NEXT_PUBLIC_SANITY_PREVIEW_ORIGIN||'http://127.0.0.1:3000').replace(/\/$/,'')}/en`:'/en',previewMode:{enable:'/api/draft-mode/enable',disable:'/api/draft-mode/disable'}},
  resolve:{locations:{
  post:defineLocations({select:{title:'title',language:'language',slug:'slug.current'},resolve:doc=>({locations:doc?.slug?[{title:doc.title||'Blog post',href:`/${doc.language||'en'}/blog/${doc.slug}`},{title:'Blog',href:`/${doc.language||'en'}`}]:[]})}),
  profile:defineLocations({select:{language:'language'},resolve:doc=>({locations:[{title:'About / CV',href:`/${doc?.language||'en'}/about`}]})}),
