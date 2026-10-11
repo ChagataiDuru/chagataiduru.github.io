@@ -24,7 +24,7 @@
             {
               "_type": "span",
               "_key": "s0",
-              "text": "I’m Çağatay Duru, a software engineer with experience across backend development, VR applications and embedded systems.",
+              "text": "I’m Çağatay Duru, a software engineer with experience across backend development, VR applications and embedded systems. I currently work as a software engineer at HAVELSAN.",
               "marks": []
             }
           ]
@@ -74,14 +74,33 @@
           "url": "https://linkedin.com/in/chagatai-duru"
         }
       ],
-      "reviewNote": "Imported record: NTT experience was listed as “September 2024 – Present” and graduation as “Expected June 2025”. Current status has not been confirmed.",
+      "reviewNote": "Education review: the source lists graduation as “Expected June 2025”. Graduation status and final degree/minor wording have not been confirmed. Employment dates were confirmed by Çağatay on 11 October 2026.",
       "experience": [
         {
-          "_key": "exp0",
-          "organization": "NTT Data Business Solutions Turkey",
-          "role": "Software Engineer (Project Student)",
-          "period": "September 2024 – end date to review",
+          "_key": "expHavelsan",
+          "organization": "HAVELSAN",
+          "role": "Software Engineer",
+          "period": "September 2026 – Present",
           "details": [
+            "Full-time · Pendik, Istanbul, Türkiye · On-site"
+          ]
+        },
+        {
+          "_key": "expNttJunior",
+          "organization": "NTT DATA Business Solutions",
+          "role": "Junior Software Developer",
+          "period": "July 2025 – September 2026",
+          "details": [
+            "Full-time · Istanbul, Türkiye · Hybrid"
+          ]
+        },
+        {
+          "_key": "exp0",
+          "organization": "NTT DATA Business Solutions",
+          "role": "Project Student",
+          "period": "September 2024 – June 2025",
+          "details": [
+            "Part-time · Istanbul, Türkiye · Hybrid",
             "Developed and maintained BSH software systems using .NET and Angular, and ASP.NET for legacy applications.",
             "Designed, queried and managed application data with Microsoft SQL Server.",
             "Implemented CI/CD pipelines using GitHub Actions and contributed across the software development lifecycle."
@@ -208,7 +227,7 @@
             {
               "_type": "span",
               "_key": "s0",
-              "text": "Ben Çağatay Duru. Backend geliştirme, VR uygulamaları ve gömülü sistemler alanlarında deneyimi olan bir yazılım mühendisiyim.",
+              "text": "Ben Çağatay Duru. Backend geliştirme, VR uygulamaları ve gömülü sistemler alanlarında deneyimi olan bir yazılım mühendisiyim. Şu anda HAVELSAN’da yazılım mühendisi olarak çalışıyorum.",
               "marks": []
             }
           ]
@@ -258,14 +277,33 @@
           "url": "https://linkedin.com/in/chagatai-duru"
         }
       ],
-      "reviewNote": "İçe aktarılan kayıt: NTT deneyimi “Eylül 2024 – Günümüz”, mezuniyet ise “Haziran 2025 (beklenen)” olarak belirtilmişti. Güncel durum doğrulanmadı. Türkçe çeviri inceleme bekliyor.",
+      "reviewNote": "Eğitim kaydı incelemesi: Kaynakta mezuniyet “Haziran 2025 (beklenen)” olarak belirtiliyor. Mezuniyet durumu ve kesin bölüm/yan dal bilgisi henüz doğrulanmadı. İş deneyimi tarihleri Çağatay tarafından 11 Ekim 2026’da doğrulandı.",
       "experience": [
         {
-          "_key": "exp0",
-          "organization": "NTT Data Business Solutions Turkey",
-          "role": "Yazılım Mühendisi (Proje Öğrencisi)",
-          "period": "Eylül 2024 – bitiş tarihi gözden geçirilecek",
+          "_key": "expHavelsan",
+          "organization": "HAVELSAN",
+          "role": "Yazılım Mühendisi",
+          "period": "Eylül 2026 – Devam ediyor",
           "details": [
+            "Tam zamanlı · Pendik, İstanbul, Türkiye · Ofiste"
+          ]
+        },
+        {
+          "_key": "expNttJunior",
+          "organization": "NTT DATA Business Solutions",
+          "role": "Junior Yazılım Geliştirici",
+          "period": "Temmuz 2025 – Eylül 2026",
+          "details": [
+            "Tam zamanlı · İstanbul, Türkiye · Hibrit"
+          ]
+        },
+        {
+          "_key": "exp0",
+          "organization": "NTT DATA Business Solutions",
+          "role": "Proje Öğrencisi",
+          "period": "Eylül 2024 – Haziran 2025",
+          "details": [
+            "Yarı zamanlı · İstanbul, Türkiye · Hibrit",
             "BSH yazılım sistemlerini .NET ve Angular ile, eski uygulamaları ise ASP.NET ile geliştirdi ve bakımını yaptı.",
             "Microsoft SQL Server ile uygulama verilerini tasarladı, sorguladı ve yönetti.",
             "GitHub Actions ile CI/CD süreçleri uyguladı ve yazılım geliştirme yaşam döngüsünün farklı aşamalarına katkıda bulundu."
